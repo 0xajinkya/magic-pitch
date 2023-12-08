@@ -5,14 +5,21 @@ import { AppBar, Toolbar, Box, IconButton, Typography } from "@mui/material";
 import Image from "next/image";
 import { CustomButton } from "@/components/Global";
 import { GREEN, PURPLE } from "@/constants";
-import { Menu } from "@mui/icons-material";
+import { ExpandMore, Menu } from "@mui/icons-material";
 import { NavDrawer } from "../NavDrawer";
 import { usePathname, useRouter } from "next/navigation";
 import CustomMenuButton from "@/components/Global/CustomMenuButton";
+import { ServicesMenu } from "../ServicesMenu";
+import { ProductMenu } from "../ProductMenu";
+import { CompanyMenu } from "../CompanyMenu";
 export const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	const pathname = usePathname();
 	const router = useRouter();
+
+	const [servicesMenu, setServicesMenu] = useState(false);
+	const [productMenu, setProductMenu] = useState(false);
+	const [companyMenu, setCompanyMenu] = useState(false);
 
 	return (
 		<AppBar
@@ -53,7 +60,7 @@ export const Navbar = () => {
 						display: ["none", "flex"],
 						alignItems: "center",
 						justifyContent: "space-between",
-						gap: "5px",
+						gap: "5px"
 						// margin: "auto",
 						// flexWrap: "wrap"
 					}}
@@ -70,12 +77,55 @@ export const Navbar = () => {
 							maxWidth: "100%"
 						}}
 					>
-						<CustomMenuButton text={"Services"} />
-						<CustomMenuButton text={"Product"} />
+						{/* <CustomMenuButton text={"Services"} handleHover={() => setServicesMenu((sm) => true)} /> */}
 						<CustomButton
-							text={"Pricing"}
+							text={"Services"}
+							icon={
+								<ExpandMore
+									sx={{
+										fontSize: "14px",
+										ml:"4px"
+									}}
+								/>
+							}
+							onClick={() => setServicesMenu((sm) => true)}
 						/>
-						<CustomMenuButton text={"Company"} />
+						<ServicesMenu open={servicesMenu} onClose={() => setServicesMenu((sm) => !sm)} />
+						{/* <CustomMenuButton
+							text={"Product"}
+							handleHover={() => setProductMenu((sm) => true)}
+						/> */}
+						<CustomButton
+							text={"Product"}
+							icon={
+								<ExpandMore
+									sx={{
+										fontSize: "14px",
+										ml:"4px"
+									}}
+								/>
+							}
+							onClick={() => setProductMenu((sm) => true)}
+						/>
+						<ProductMenu open={productMenu} onClose={() => setProductMenu((sm) => !sm)} />
+						<CustomButton text={"Pricing"} />
+						{/* <CustomMenuButton
+							text={"Company"}
+							handleHover={() => setCompanyMenu((sm) => true)}
+						/> */}
+						<CustomButton
+							text={"Company"}
+							icon={
+								<ExpandMore
+									sx={{
+										fontSize: "14px",
+										ml:"4px"
+									}}
+								/>
+							}
+							onClick={() => setCompanyMenu((sm) => true)}
+						/>
+						<CompanyMenu open={companyMenu} onClose={() => setCompanyMenu((sm) => !sm)} />
 					</Box>
 				</Box>
 				<Box
@@ -85,7 +135,7 @@ export const Navbar = () => {
 						justifyContent: "space-between",
 						gap: "5px",
 						paddingLeft: "6px",
-						justifyContent: "center",
+						justifyContent: "center"
 						// maxWidth: "100%"
 					}}
 				>

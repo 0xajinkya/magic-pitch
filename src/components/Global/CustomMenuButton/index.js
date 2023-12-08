@@ -1,8 +1,9 @@
+import { PURPLE } from '@/constants';
 import { ExpandMore } from '@mui/icons-material';
 import { Box, Button, Menu, MenuItem, Typography } from '@mui/material'
 import React, { useState } from 'react'
 
-const CustomMenuButton =  ({ text, styles }) => {
+const CustomMenuButton =  ({ text, styles, items }) => {
 
   const [open, setOpen] = useState();
   const [anchorEl, setAnchorEl] = useState();
@@ -30,6 +31,9 @@ const CustomMenuButton =  ({ text, styles }) => {
           borderRadius: "30px",
           ...styles,
         }}
+        // onMouseEnter={handleHover}
+        // onMouseLeave={handleHover}
+        // onClick={handleHover}
       >
         <Typography
           sx={{
@@ -57,9 +61,10 @@ const CustomMenuButton =  ({ text, styles }) => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem> */}
+        {items?.map((it, i) =><MenuItem  key={i} onClick={handleClose} sx={{color: "#555", ":hover": {color: PURPLE}}} >{it}</MenuItem> )}
       </Menu>
       </>
   )

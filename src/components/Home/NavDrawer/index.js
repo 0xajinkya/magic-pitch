@@ -85,10 +85,10 @@ export const NavDrawer = ({ open, handleClose }) => {
 									maxWidth: "100%"
 								}}
 							>
-								<CustomMenuButton text={"Services"} />
-								<CustomMenuButton text={"Product"} />
+								<CustomMenuButton text={"Services"} items={["Prospecting Intelligence", "Outreach Intelligence", "Campaign Management", "Data Sourcing", "Server, Warm Up"]}/>
+								<CustomMenuButton text={"Product"}  items={["B2B Pitch", "B2B Pitch", "B2B Pitch", "B2B Pitch", "Sales Pitch", "Sales Pitch", "Sales Pitch", "View All Pitch", "Career Pitch", "Career Pitch"]}/>
 								<CustomButton text={"Pricing"} />
-								<CustomMenuButton text={"Company"} />
+								<CustomMenuButton text={"Company"} items={["Why Magicpitch", "Blog", "Career", "Contact Us", "Client", "About Us"]}/>
 							</Box>
 						</Box>
 						<Box
