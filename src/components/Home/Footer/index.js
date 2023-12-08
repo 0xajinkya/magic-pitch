@@ -8,9 +8,11 @@ export const Footer = () => {
 	return (
 		<Box
 			sx={{
-				px: "149px",
-				py: "80px",
+				px: ["20px", "149px"],
+				py: ["100px", "100px"],
+				// py: "80px",
 				display: "flex",
+				flexDirection: ["column", "row"],
 				alignItems: "flex-start",
 				justifyContent: "space-between"
 			}}
@@ -40,7 +42,10 @@ export const Footer = () => {
 						magicpitch
 					</Typography>
 				</Box>
-				<Box>
+				<Box
+					sx={{
+					}}
+				>
 					<Typography
 						sx={{
 							fontFamily: "Montserrat"
@@ -60,6 +65,7 @@ export const Footer = () => {
 				</Box>
 				<Box
 					sx={{
+						display: ["none", "flex"],
 						mt: "100px"
 					}}
 				>
@@ -88,8 +94,10 @@ export const Footer = () => {
 			<Box
 				sx={{
 					display: "flex",
+					flexDirection: ["column", "row"],
 					alignItems: "flex-start",
-					gap: "150px"
+					gap: ["30px", "150px"],
+					mt: ["20px", 0]
 				}}
 			>
 				<Box>

@@ -43,8 +43,8 @@ export const Discover = () => {
 	return (
 		<Box
 			sx={{
-				px: "149px",
-				py: "138px",
+				px: ["20px", "149px"],
+				py: ["100px", "138px"],
 				display: "flex",
 				flexDirection: "column",
 				alignItems: "center",
@@ -53,7 +53,7 @@ export const Discover = () => {
 		>
 			<Typography
 				sx={{
-					fontSize: "55px",
+					fontSize: ["30px", "55px"],
 					fontWeight: 600,
 					fontFamily: "Montserrat",
 					textAlign: "center"

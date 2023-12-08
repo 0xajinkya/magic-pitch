@@ -8,10 +8,12 @@ export const Hero = () => {
 	return (
 		<Box
 			sx={{
-				py: "80px",
+				py: ["20px", "80px"],
 				display: "flex",
 				flexDirection: "column",
-				position: "relative"
+				position: "relative",
+				maxHeight: ["auto", "300vh"],
+				overflow: "hidden"
 			}}
 		>
 			{/* Absoute Components Starts */}
@@ -23,12 +25,13 @@ export const Hero = () => {
 					flexDirection: "column",
 					gap: "30px",
 					position: "relative",
-					px: "100px"
+					px: ["20px", "100px"]
 				}}
 			>
 				<Box
 					sx={{
 						position: "absolute",
+						display: ["none", "flex"],
 						top: "80%",
 						left: "30%"
 					}}
@@ -68,6 +71,7 @@ export const Hero = () => {
 				<Box
 					sx={{
 						position: "absolute",
+						display: ["none", "flex"],
 						top: "50%",
 						right: "20%"
 					}}
@@ -103,20 +107,22 @@ export const Hero = () => {
 						</Typography>
 					</Box>
 				</Box>
-				<Typography
-					sx={{
-						fontSize: "64px",
-						textAlign: "center",
-						fontFamily: "Open Sans",
-						color: PURPLE,
-						fontWeight: 700
-					}}
-				>
-					Revolutionize your Outreach with AI enhanced precision
-				</Typography>
+				<Box>
+					<Typography
+						sx={{
+							fontSize: ["35px", "64px"],
+							textAlign: "center",
+							fontFamily: "Open Sans",
+							color: PURPLE,
+							fontWeight: 700
+						}}
+					>
+						Revolutionize your Outreach with AI enhanced precision
+					</Typography>
+				</Box>
 				<Box
 					sx={{
-						px: "400px"
+						px: ["0px", "400px"]
 					}}
 				>
 					<Typography
@@ -177,7 +183,7 @@ export const Hero = () => {
 			<Box
 				sx={{
 					mt: "200px",
-					display: "flex",
+					display: ["none", "flex"],
 					flexDirection: "column",
 					alignItems: "center"
 				}}
@@ -186,7 +192,7 @@ export const Hero = () => {
 					src={"/images/home/dash1.svg"}
 					width={1440}
 					height={1200}
-                    alt="Dashboard"
+					alt="Dashboard"
 					// style={{ backgroundColor: "red" }}
 				/>
 				<Box
@@ -202,29 +208,29 @@ export const Hero = () => {
 					<Box
 						sx={{
 							display: "flex",
-                            height: "100%",
-                            mt: "500px",
-                            px: "400px",
-                            position: "relative"
+							height: "100%",
+							mt: "500px",
+							px: "400px",
+							position: "relative"
 						}}
 					>
-                        <Image 
-                            src={"/images/home/circle.svg"}
-                            width={150}
-                            height={150}
-                            style={{
-                                position: "absolute",
-                                zIndex: -1,
-                                top: "-3%",
-                                left: "28%"
-                            }}
-                        />
+						<Image
+							src={"/images/home/circle.svg"}
+							width={150}
+							height={150}
+							style={{
+								position: "absolute",
+								zIndex: -1,
+								top: "-3%",
+								left: "28%"
+							}}
+						/>
 						<Typography
 							sx={{
 								fontSize: "72.5px",
 								fontWeight: 600,
 								color: "white",
-                                textAlign: "center"
+								textAlign: "center"
 							}}
 						>
 							Get you ideal customers

@@ -99,10 +99,11 @@ export const How = () => {
 		>
 			<Box
 				sx={{
-					px: "149px",
-					py: "138px",
+					px: ["20px", "149px"],
+					py: ["100px", "138px"],
 					display: "flex",
-					alignItems: "center"
+					alignItems: "center",
+					flexDirection: ["column", "row"]
 				}}
 			>
 				<Box
@@ -117,7 +118,7 @@ export const How = () => {
 					<Typography
 						sx={{
 							color: BLACK,
-							fontSize: "45px",
+							fontSize: ["30px", "45px"],
 							fontWeight: 600
 						}}
 					>
@@ -125,7 +126,7 @@ export const How = () => {
 					</Typography>
 					<Box
 						sx={{
-							pr: "100px",
+							pr: ["0px", "100px"],
 							display: "flex",
 							flexDirection: "column",
 							gap: "30px"
@@ -210,30 +211,31 @@ export const How = () => {
 				<Box
 					sx={{
 						flex: 1,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
+						display: ["none", "flex"],
+						justifyContent: "center",
+						alignItems: "center"
 					}}
 				>
-          <Box
-            sx={{
-              backgroundColor: "#E8E2F4",
-              borderRadius: "80px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <Image 
-            src={"/images/home/person3.svg"}
-            width={481}
-            height={556}
-            style={{
-              margin: "auto",
-            }}
-          />
-          </Box>
-        </Box>
+					<Box
+						sx={{
+							backgroundColor: "#E8E2F4",
+							borderRadius: "80px",
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center"
+						}}
+					>
+						<Image
+							src={"/images/home/person3.svg"}
+							width={481}
+							height={556}
+							style={{
+								margin: "auto"
+							}}
+							alt={"Person"}
+						/>
+					</Box>
+				</Box>
 			</Box>
 		</Box>
 	);

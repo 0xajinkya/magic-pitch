@@ -69,14 +69,16 @@ export const Perks = () => {
 				sx={{
 					display: "flex",
 					alignItems: "center",
+				flexDirection: ["column", "row"],
 					gap: "40px"
 				}}
 			>
 				<Box
-          sx={{
-            mt: "60px"
-          }}
-        >
+					sx={{
+						mt: ["0px", "60px"],
+						ml: ["60px", 0]
+					}}
+				>
 					<PerkCard
 						color={PURPLE}
 						icon={"/icons/email.svg"}
@@ -96,10 +98,11 @@ export const Perks = () => {
 					/>
 				</Box>
 				<Box
-          sx={{
-            mt: "60px"
-          }}
-        >
+					sx={{
+						mt: ["0px", "60px"],
+						ml: ["60px", 0]
+					}}
+				>
 					<PerkCard
 						color={PURPLE}
 						icon={"/icons/lead.svg"}

@@ -12,20 +12,21 @@ export const Edge = () => {
 		>
 			<Box
 				sx={{
-					pl: "149px",
-					py: "138px",
+					py: ["100px", "138px"],
 					display: "flex",
+					flexDirection: ["column", "row"],
 					alignItems: "center"
 				}}
 			>
 				<Box
 					sx={{
-						flex: 0.8
+						flex: 0.8,
+					px: ["20px", "149px"],
 					}}
 				>
 					<Typography
 						sx={{
-							fontSize: "50px",
+							fontSize: ["35px", "50px"],
 							fontFamily: "Montserrat",
 							fontWeight: 600,
 							colo: BLACK
@@ -35,7 +36,8 @@ export const Edge = () => {
 					</Typography>
 					<Box
 						sx={{
-							pr: "175px"
+							pr: ["0px", "175px"],
+							my: ["20px", 0]
 						}}
 					>
 						<Typography
@@ -56,7 +58,8 @@ export const Edge = () => {
 						flex: 1,
 						display: "flex",
 						justifyContent: "center",
-						alignItems: "center"
+						alignItems: "center",
+					
 					}}
 				>
 					<Box
@@ -65,7 +68,7 @@ export const Edge = () => {
 							height: "90vh",
 							backgroundColor: PURPLE,
 							borderTopLeftRadius: "50px",
-							borderBottomLeftRadius: "50px"
+							borderBottomLeftRadius: "50px",
 						}}
 					>
 						<Box
@@ -85,38 +88,42 @@ export const Edge = () => {
 							>
 								<Box
 									sx={{
-										py: "150px",
-										pl: "110px",
+										py: ["40px", "150px"],
+										pl: ["30px", "110px"],
 										display: "flex",
 										flexDirection: "column",
 										gap: "20px"
 									}}
 								>
 									<Box
-                    sx={{
-                      backgroundColor: "#E5E3E3",
-                      width: "63px",
-                      height: "63px",
-                      borderRadius: "100%",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center"
-                    }}
-                  >
-											<Email 
-                        sx={{
-                          color: "white",
-                          fontSize: "32px"
-                        }}
-                      />
+										sx={{
+											backgroundColor: "#E5E3E3",
+											width: "63px",
+											height: "63px",
+											borderRadius: "100%",
+											display: "flex",
+											justifyContent: "center",
+											alignItems: "center"
+										}}
+									>
+										<Email
+											sx={{
+												color: "white",
+												fontSize: "32px"
+											}}
+										/>
 									</Box>
 
-									<Typography sx={{fontSize: "32px", fontFamily: "Montserrat", fontWeight: 600}}>Impressive Outreach Success Rates</Typography>
 									<Typography
-                    sx={{
-                      fontFamily: "Montserrat"
-                    }}
-                  >
+										sx={{ fontSize: "32px", fontFamily: "Montserrat", fontWeight: 600 }}
+									>
+										Impressive Outreach Success Rates
+									</Typography>
+									<Typography
+										sx={{
+											fontFamily: "Montserrat"
+										}}
+									>
 										Our commitment to excellence reflects in our numbers - an astounding
 										82% open rate and a 10% reply rate. Outreach was never this effective.
 									</Typography>

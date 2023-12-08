@@ -14,8 +14,8 @@ export const Demo = () => {
 		>
 			<Box
 				sx={{
-					px: "130px",
-					py: "159px"
+					px: ["20px", "149px"],
+				py: ["100px", "100px"],
 				}}
 			>
 				<Box
@@ -27,13 +27,13 @@ export const Demo = () => {
 				>
 					<Box
 						sx={{
-							px: "77px",
-							py: "127px",
+							px: ["30px", "77px"],
+							py: ["40px", "127px"],
 							display: "flex",
 							alignItems: "center",
 							// backgroundImage: "url('/images/home/woman.svg') no-repeat center 10%",
 							// backgroundSize: "50% 50%",
-							background: `url('/images/home/woman.svg') no-repeat 110% 100%`,
+							background: ["none", `url('/images/home/woman.svg') no-repeat 110% 100%`],
 							backgroundSize: "60%"
 						}}
 					>
@@ -47,7 +47,7 @@ export const Demo = () => {
 						>
 							<Typography
 								sx={{
-									fontSize: "50px",
+									fontSize: ["35px", "50px"],
 									fontWeight: 700
 								}}
 							>

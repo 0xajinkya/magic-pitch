@@ -15,16 +15,18 @@ export const Points = ({
 	marginTop
 }) => {
 	return (
+		
 		<Box
 			sx={{
 				backgroundColor: backgroundColor,
-				px: "141px",
-				py: "255px",
+				px: ["30px", "141px"],
+				py: ["100px", "255px"],
 				borderTopLeftRadius: "57px",
 				borderTopRightRadius: "57px",
 				zIndex: zIndex,
 				mt: marginTop || 0,
 				display: "flex",
+				flexDirection: ["column-reverse", "row"],
 				alignItems: "center"
 			}}
 		>
@@ -38,22 +40,23 @@ export const Points = ({
 			>
 				<Box
 					sx={{
-						position: "relative"
+						position: "relative",
+						px: ["00px", 0]
 					}}
 				>
 					<Circle
 						sx={{
-							fontSize: "120px",
+							fontSize: ["85px", "120px"],
 							position: "absolute",
 							color: imgBack,
-							top: "20%",
-							left: "-26%"
+							top: ["20%", "25%"],
+							left: ["-25%", "-26%"]
 						}}
 					/>
 					<Typography
 						sx={{
 							fontFamily: "Zen Tokyo Zoo",
-							fontSize: "150px",
+							fontSize: ["100px", "150px"],
 							transform: "rotate(-17.669deg)",
 							color: "white"
 						}}
@@ -61,20 +64,27 @@ export const Points = ({
 						{number}
 					</Typography>
 				</Box>
-
-				<Typography
-					sx={{
-						fontSize: "64px",
-						fontWeight: 700,
-						fontFamily: "Montserrat",
-						color: "white"
-					}}
+				<Box
+					sx={
+						{
+							// pl: ["30px"]
+						}
+					}
 				>
-					{title}
-				</Typography>
+					<Typography
+						sx={{
+							fontSize: ["40px", "64px"],
+							fontWeight: 700,
+							fontFamily: "Montserrat",
+							color: "white"
+						}}
+					>
+						{title}
+					</Typography>
+				</Box>
 				<Box
 					sx={{
-						pr: "150px"
+						pr: ["0px", "150px"]
 					}}
 				>
 					<Typography
@@ -109,8 +119,8 @@ export const Points = ({
 			>
 				<Box
 					sx={{
-						width: "484px",
-						height: "654px",
+						width: ["300px", "484px"],
+						height: ["300px", "654px"],
 						backgroundColor: imgBack,
 						borderRadius: "20px",
 						display: "flex",
